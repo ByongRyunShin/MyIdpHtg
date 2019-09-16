@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+def VUFORIA_SDK_DIR = './vuforia-sdk/'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -10,6 +12,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir "$VUFORIA_SDK_DIR/build/lib/"
     }
     buildTypes {
         release {
@@ -35,4 +41,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation files('libs\\Vuforia.jar')
     implementation files('libs\\libDaumMapAndroid.jar')
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
