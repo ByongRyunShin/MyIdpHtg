@@ -2,6 +2,7 @@ package com.ssapp.myidphtg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements MapView.MapViewEv
 
     private MapView mapView;
 
+    private String mClassToLaunch;
+    private String mClassToLaunchPackage;
+
     private static final MapPoint CUSTOM_MARKER_POINT1 = MapPoint.mapPointWithGeoCoord(37.571986,126.9844854);
     private static final MapPoint CUSTOM_MARKER_POINT2 = MapPoint.mapPointWithGeoCoord(37.570384,126.9886279);
     private static final MapPoint CUSTOM_MARKER_POINT3 = MapPoint.mapPointWithGeoCoord(37.5700408,126.9834853);
@@ -26,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements MapView.MapViewEv
         mapView = (MapView)findViewById(R.id.map_view);
         mapView.setDaumMapApiKey(MapApiConst.DAUM_MAPS_ANDROID_APP_API_KEY);
         mapView.setMapViewEventListener(this);
+
+        mClassToLaunchPackage = getPackageName();
+        mClassToLaunch = mClassToLaunchPackage + "."
+                + "app.ImageTargets.ImageTargets";
     }
 
     @Override
@@ -131,7 +139,9 @@ public class MainActivity extends AppCompatActivity implements MapView.MapViewEv
     }
 
     public void onMenuBt2Clicked(View v) {
-
+        Intent i = new Intent();
+        i.setClassName(mClassToLaunchPackage, mClassToLaunch);
+        startActivity(i);
     }
 
     public void onMenuBt3Clicked(View v) {

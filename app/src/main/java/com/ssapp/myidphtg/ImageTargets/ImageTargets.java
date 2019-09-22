@@ -28,6 +28,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ssapp.myidphtg.R;
+import com.ssapp.myidphtg.SampleActivityBase;
 import com.vuforia.CameraDevice;
 import com.vuforia.DataSet;
 import com.vuforia.DeviceTracker;
@@ -41,19 +43,19 @@ import com.vuforia.TrackableResult;
 import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
 import com.vuforia.Vuforia;
-import com.vuforia.engine.CoreSamples.R;
-import com.vuforia.engine.CoreSamples.ui.SampleAppMenu.SampleAppMenu;
-import com.vuforia.engine.CoreSamples.ui.SampleAppMenu.SampleAppMenuGroup;
-import com.vuforia.engine.CoreSamples.ui.SampleAppMenu.SampleAppMenuInterface;
-import com.vuforia.engine.CoreSamples.ui.SampleAppMessage;
-import com.vuforia.engine.SampleApplication.SampleActivityBase;
-import com.vuforia.engine.SampleApplication.SampleApplicationControl;
-import com.vuforia.engine.SampleApplication.SampleApplicationException;
-import com.vuforia.engine.SampleApplication.SampleApplicationSession;
-import com.vuforia.engine.SampleApplication.utils.LoadingDialogHandler;
-import com.vuforia.engine.SampleApplication.utils.SampleAppTimer;
-import com.vuforia.engine.SampleApplication.utils.SampleApplicationGLView;
-import com.vuforia.engine.SampleApplication.utils.Texture;
+
+import com.ssapp.myidphtg.CoreSamples.ui.SampleAppMenu.SampleAppMenu;
+import com.ssapp.myidphtg.CoreSamples.ui.SampleAppMenu.SampleAppMenuGroup;
+import com.ssapp.myidphtg.CoreSamples.ui.SampleAppMenu.SampleAppMenuInterface;
+import com.ssapp.myidphtg.CoreSamples.ui.SampleAppMessage;
+
+import com.ssapp.myidphtg.SampleApplicationControl;
+import com.ssapp.myidphtg.SampleApplicationException;
+import com.ssapp.myidphtg.SampleApplicationSession;
+import com.ssapp.myidphtg.utils.LoadingDialogHandler;
+import com.ssapp.myidphtg.utils.SampleAppTimer;
+import com.ssapp.myidphtg.utils.SampleApplicationGLView;
+import com.ssapp.myidphtg.utils.Texture;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

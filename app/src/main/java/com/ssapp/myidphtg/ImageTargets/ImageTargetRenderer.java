@@ -13,6 +13,19 @@ import android.opengl.GLES20;
 import android.opengl.Matrix;
 import android.util.Log;
 
+import com.ssapp.myidphtg.SampleAppRendererControl;
+import com.ssapp.myidphtg.SampleAppRenderer;
+import com.ssapp.myidphtg.SampleApplicationSession;
+import com.ssapp.myidphtg.SampleRendererBase;
+import com.ssapp.myidphtg.utils.MeshObject;
+import com.ssapp.myidphtg.utils.SampleApplication3DModel;
+import com.ssapp.myidphtg.utils.SampleMath;
+import com.ssapp.myidphtg.utils.Teapot;
+import com.ssapp.myidphtg.utils.CubeShaders;
+import com.ssapp.myidphtg.utils.LoadingDialogHandler;
+import com.ssapp.myidphtg.utils.SampleUtils;
+import com.ssapp.myidphtg.utils.Texture;
+
 import com.vuforia.DeviceTrackableResult;
 import com.vuforia.ImageTargetResult;
 import com.vuforia.Matrix44F;
@@ -22,18 +35,6 @@ import com.vuforia.Trackable;
 import com.vuforia.TrackableResult;
 import com.vuforia.TrackableResultList;
 import com.vuforia.Vuforia;
-import com.vuforia.engine.SampleApplication.SampleAppRenderer;
-import com.vuforia.engine.SampleApplication.SampleAppRendererControl;
-import com.vuforia.engine.SampleApplication.SampleApplicationSession;
-import com.vuforia.engine.SampleApplication.SampleRendererBase;
-import com.vuforia.engine.SampleApplication.utils.CubeShaders;
-import com.vuforia.engine.SampleApplication.utils.LoadingDialogHandler;
-import com.vuforia.engine.SampleApplication.utils.MeshObject;
-import com.vuforia.engine.SampleApplication.utils.SampleApplication3DModel;
-import com.vuforia.engine.SampleApplication.utils.SampleMath;
-import com.vuforia.engine.SampleApplication.utils.SampleUtils;
-import com.vuforia.engine.SampleApplication.utils.Teapot;
-import com.vuforia.engine.SampleApplication.utils.Texture;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
